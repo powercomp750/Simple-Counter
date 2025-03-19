@@ -1,7 +1,11 @@
 package comp.basic.simplecounter
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Bundle
+import android.os.VibrationEffect
+import android.os.Vibrator
+import android.os.VibratorManager
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -58,7 +62,20 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-fun triggerVibration(context: Context) {}
+@SuppressLint("ServiceCast", "NewApi")
+fun triggerVibration(context: Context) {
+    val vibrator = if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.S) {
+        val vibratorManager = context.getSystemService(Context.VIBRATOR_MANAGER_SERVICE) as VibratorManager
+        vibratorManager.defaultVibrator
+    } else {
+        context.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+    }
+
+    if (vibrator.hasVibrator()) {
+        val vibrationEffect = VibrationEffect.createOneShot(100, VibrationEffect.DEFAULT_AMPLITUDE) // 100ms vibration
+        vibrator.vibrate(vibrationEffect)
+    }
+}
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -269,4 +286,10 @@ fun DefaultBtn(
     ) {
         Text(text)
     }
+}
+
+@Preview(showBackground = true, device = "spec:parent=pixel_5,orientation=landscape")
+@Composable
+fun MyPreview() {
+    MainPageHorizontal()
 }
