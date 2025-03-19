@@ -3,5 +3,7 @@ Minimalistic and elegant counter application made for assistance in counter base
 
 Usage is very simple! Just launch and play!!!
 
-![img.png](img.png)
-![img_1.png](img_1.png)
+<p align="center">
+  <img src="img.png" width="300">
+  <img src="img_1.png" width="300">
+</p>
