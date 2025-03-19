@@ -7,6 +7,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.background
+import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -35,6 +36,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.text.input.ImeAction
@@ -147,6 +149,97 @@ fun MainPageHorizontal() {
                         context.finish()
                     }},true,Modifier.size(width = 150.dp, height = 40.dp))
             }
+        }
+    }
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun MainPageVertical() {
+    val keyboardController = LocalSoftwareKeyboardController.current
+    val maxValue = 999999999
+    var context = LocalContext.current
+    var n1 by rememberSaveable { mutableIntStateOf(0) }
+    var n2 by rememberSaveable { mutableStateOf("") }
+    if (n1<0) {
+        n1 = 0
+        Toast.makeText(context,"Value can't be a negative", Toast.LENGTH_SHORT).show()
+    }
+    if (n1 > 999999999) {
+        Toast.makeText(context,"Counter has reached max limit!", Toast.LENGTH_SHORT).show()
+        n1 = 999999999
+    }
+    val max = 10
+    Column(
+        Modifier
+            .fillMaxWidth().padding(top = 150.dp)
+            .pointerInput(Unit) {
+                detectTapGestures(
+                    onTap = {
+                        keyboardController?.hide()
+                    }
+                )
+            },
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.SpaceEvenly
+
+    ) {
+        Text("Simple Counter", fontSize = 30.sp)
+        Text(text = n1.toString(), fontSize = 60.sp, modifier = Modifier.padding(20.dp))
+        Row(Modifier.padding(all = 20.dp)) {
+            DefaultBtn("Increment",{n1++;triggerVibration(context) },true,Modifier.padding(end = 25.dp))
+            DefaultBtn("Decrement",{n1--; triggerVibration(context)},n1>0)
+        }
+        Row(Modifier.fillMaxWidth().padding(top = 30.dp, bottom = 30.dp),
+            horizontalArrangement = Arrangement.SpaceEvenly,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Spacer(Modifier.size(width = 150.dp, height = 1.5.dp).background(Color(0xFF4C585B)))
+            Text("OR")
+            Spacer(Modifier.size(width = 150.dp, height = 1.5.dp).background(Color(0xFF4C585B)))
+        }
+        OutlinedTextField(value = n2, onValueChange = {
+            if (it.length < max) {
+                n2 = it
+            }
+
+        }, label = { Text("Enter your custom value") }, keyboardOptions =
+        KeyboardOptions(
+            keyboardType = KeyboardType.Number,
+            imeAction = ImeAction.Done
+        ),
+            singleLine = true,
+            colors = TextFieldDefaults.outlinedTextFieldColors(
+                focusedBorderColor = Color(0xFFF14A00),
+                unfocusedBorderColor = Color(0xFFF14A00),
+                unfocusedLabelColor = MaterialTheme.colorScheme.secondary,
+                focusedLabelColor = Color(0xFFF14A00),
+                cursorColor = MaterialTheme.colorScheme.secondary,
+                focusedTextColor = MaterialTheme.colorScheme.secondary,
+            ),
+
+            )
+        Row(Modifier.padding(30.dp)) {
+            DefaultBtn("Increase",{
+                n2.toIntOrNull()?.let {
+                    val newValue = n1 + it
+                    if (newValue <= maxValue) {
+                        n1 = newValue + n2.toInt()
+                        triggerVibration(context)
+                    } else {
+                        Toast.makeText(context, "Counter has reached max limit!", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            },n2>0.toString(),Modifier.padding(end = 25.dp))
+            DefaultBtn("Decrease",{n1-= parseInt(n2) ;triggerVibration(context)},n2>0.toString() && n1>0)
+        }
+
+        Row(Modifier.padding(top = 20.dp).fillMaxWidth(), horizontalArrangement = Arrangement.SpaceEvenly, verticalAlignment = Alignment.CenterVertically) {
+            DefaultBtn("  Reset  ",{n1=0;n2 = "0"},true,Modifier.size(width = 150.dp, height = 40.dp).padding())
+            DefaultBtn("  EXIT  ",{
+                if (context is android.app.Activity) {
+                    context.finish()
+                }},true,Modifier.size(width = 150.dp, height = 40.dp))
         }
     }
 }
