@@ -29,6 +29,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.MaterialTheme.colorScheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
@@ -48,17 +49,37 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import comp.basic.counter.winInfo
+import comp.basic.counter.winLayout
 import comp.basic.simplecounter.ui.theme.SimpleCounterTheme
 import java.lang.Integer.parseInt
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContent {
-            SimpleCounterTheme {
+            SimpleCounterTheme() {
+                val windowInfo = winLayout()
+                Surface(color = colorScheme.background, modifier = Modifier.fillMaxSize()) {
+                    if (windowInfo.screenWidthInfo is winInfo.WindowType.Compact) {
+                        MainPageVertical()
+                    } else {
+                        MainPageHorizontal()
+                    }
+                }
+
             }
         }
+    }
+
+    private var firstPress: Long = 0
+    override fun onBackPressed() {
+        if (firstPress+1000>System.currentTimeMillis()) {
+            super.onBackPressed()
+        } else {
+            Toast.makeText(baseContext,"Press Back twice to EXIT",Toast.LENGTH_SHORT).show()
+        }
+        firstPress = System.currentTimeMillis()
     }
 }
 
