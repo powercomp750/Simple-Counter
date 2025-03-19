@@ -47,8 +47,8 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import comp.basic.counter.winInfo
-import comp.basic.counter.winLayout
+import comp.basic.simplecounter.ui.theme.winInfo
+import comp.basic.simplecounter.ui.theme.winLayout
 import comp.basic.simplecounter.ui.theme.SimpleCounterTheme
 import java.lang.Integer.parseInt
 
