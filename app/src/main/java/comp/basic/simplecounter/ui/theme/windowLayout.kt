@@ -1,8 +1,7 @@
-package comp.basic.counter
+package comp.basic.simplecounter.ui.theme
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalConfiguration
-import androidx.compose.ui.platform.WindowInfo
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 
