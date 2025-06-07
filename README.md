@@ -1,4 +1,4 @@
-![Picture1](https://github.com/user-attachments/assets/f8dfc6bf-1589-4582-b02d-d872ab8b6a50)
+# Simple Counter
 
 <div align = center>
   
@@ -14,6 +14,9 @@
 Minimalistic and elegant counter application made for assistance in counter based scenarios. Whether you need to keep score, track repetitions, or just love counting, this app makes it **simple and fun**!
 
 Usage is very simple! Just launch and play!!!
+
+![Picture1](https://github.com/user-attachments/assets/f8dfc6bf-1589-4582-b02d-d872ab8b6a50)
+
 
 <p align="center">
   <img src="img.png" width="300">
