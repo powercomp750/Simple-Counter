@@ -8,9 +8,9 @@
 ![](https://img.shields.io/badge/Version-v2.0-green?style=flat-square)
 ![](https://img.shields.io/badge/Release-Stable-46ca00?style=flat-square)
 ![](https://img.shields.io/badge/Platforms-Android-lightgrey?style=flat-square&logo=android)
-![](https://img.shields.io/badge/Kotlin-red?style=flat-square&logo=kotlin)
-![](https://img.shields.io/badge/Jetpack%20Compose-orange?style=flat-square&logo=jetpackcompose)
-![](https://img.shields.io/badge/License-Pata%20nhi-1b91b5?style=flat-square)
+![](https://img.shields.io/badge/Kotlin-5a3471?style=flat-square&logo=kotlin)
+![](https://img.shields.io/badge/Jetpack%20Compose-186989?style=flat-square&logo=jetpackcompose)
+![](https://img.shields.io/badge/License-MIT-1b91b5?style=flat-square)
 
 </div>
 
