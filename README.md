@@ -1,4 +1,4 @@
-# Simple Counter
+![Picture1](https://github.com/user-attachments/assets/f8dfc6bf-1589-4582-b02d-d872ab8b6a50)
 
 <div align = center>
   
