@@ -1,6 +1,12 @@
 # Simple Counter
 
-Add Badges for:  Version v2.0 Release Stable Platforms Android Language Kotlin PRs Welcome API .. UI Toolkit Jetpack Compose License ..
+![](https://img.shields.io/badge/Version-v2.0-green?style=flat-square)
+![](https://img.shields.io/badge/Release-Stable-46ca00?style=flat-square)
+![](https://img.shields.io/badge/Platforms-Android-lightgrey?style=flat-square&logo=android)
+![](https://img.shields.io/badge/Language-Kotlin-red?style=flat-square&logo=kotlin)
+![](https://img.shields.io/badge/PRs-Welcome-yellow?style=flat-square)
+![](https://img.shields.io/badge/UI%20Tookit-Jetpack%20Compose-orange?style=flat-square&logo=jetpackcompose)
+![](https://img.shields.io/badge/License-Pata%20nhi-1b91b5?style=flat-square)
 
 Minimalistic and elegant counter application made for assistance in counter based scenarios. Whether you need to keep score, track repetitions, or just love counting, this app makes it **simple and fun**!
 
