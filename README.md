@@ -24,6 +24,7 @@ Usage is very simple! Just launch and play!!!
 - 🌙 Dark theme (Enabled automatically)
 - 📱 Landscape orientation added
 - 🎛️ Custom value option, allowing to count from desired number
+- 📳 Haptic feedback for real touch experience
 - 🚫 No ADs, No Signups, No Hidden charges - Just you and your numbers.
 
 ## Runtime⚡
