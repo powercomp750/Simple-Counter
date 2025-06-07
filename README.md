@@ -1,12 +1,15 @@
-# Simple Counter
+
+![Picture1](https://github.com/user-attachments/assets/f8dfc6bf-1589-4582-b02d-d872ab8b6a50)
 
 <div align = center>
+
+# Simple Counter
   
 ![](https://img.shields.io/badge/Version-v2.0-green?style=flat-square)
 ![](https://img.shields.io/badge/Release-Stable-46ca00?style=flat-square)
 ![](https://img.shields.io/badge/Platforms-Android-lightgrey?style=flat-square&logo=android)
-![](https://img.shields.io/badge/Language-Kotlin-red?style=flat-square&logo=kotlin)
-![](https://img.shields.io/badge/UI%20Tookit-Jetpack%20Compose-orange?style=flat-square&logo=jetpackcompose)
+![](https://img.shields.io/badge/Kotlin-red?style=flat-square&logo=kotlin)
+![](https://img.shields.io/badge/Jetpack%20Compose-orange?style=flat-square&logo=jetpackcompose)
 ![](https://img.shields.io/badge/License-Pata%20nhi-1b91b5?style=flat-square)
 
 </div>
@@ -15,7 +18,6 @@ Minimalistic and elegant counter application made for assistance in counter base
 
 Usage is very simple! Just launch and play!!!
 
-![Picture1](https://github.com/user-attachments/assets/f8dfc6bf-1589-4582-b02d-d872ab8b6a50)
 
 
 <p align="center">
