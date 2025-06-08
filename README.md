@@ -46,6 +46,13 @@ Usage is very simple! Just launch and play!!!
 - Habit tracking
 - Or just for fun!
 
+## Play Protect Warning
+- In case, if a warning like this appears on your device, Don't worry the app is completely safe to install and use.
+- To proceed, Select `More Details` and select `Install without scanning`
+
+![Picture2](https://github.com/user-attachments/assets/56b1662e-c080-4dab-a208-a41d6ed3dcb6)
+
+
 ## Language, Frameworks & Tools used 🛠️
 - Ultimate IDE: Android Studio
 - Build tool: Gradle
