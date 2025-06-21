@@ -7,6 +7,7 @@
   
 ![](https://img.shields.io/badge/Version-v2.0-green?style=flat-square)
 ![](https://img.shields.io/badge/Release-Stable-46ca00?style=flat-square)
+[![Hits](https://hits.sh/github.com/powercomp750/Simple-Counter.svg?style=flat-square&label=Hits&color=fe7d37)](https://hits.sh/github.com/powercomp750/Simple-Counter/)
 ![](https://img.shields.io/badge/Platforms-Android-lightgrey?style=flat-square&logo=android)
 ![](https://img.shields.io/badge/Kotlin-5a3471?style=flat-square&logo=kotlin)
 ![](https://img.shields.io/badge/Jetpack%20Compose-186989?style=flat-square&logo=jetpackcompose)
@@ -18,12 +19,7 @@ Minimalistic and elegant counter application made for assistance in counter base
 
 Usage is very simple! Just launch and play!!!
 
-
-
-<p align="center">
-  <img src="img.png" width="300">
-  <img src="img_1.png" width="300">
-</p>
+![device_mockup](https://github.com/user-attachments/assets/66e66afb-0b93-404a-bd55-744671673807)
 
 ## Features ✨
 - 🌙 Dark theme (Enabled automatically)
@@ -66,4 +62,4 @@ No internet, nothing userdata is collected, this is just a counter application.
 Your contributions are welcome! If you find any issues or want to add enhancements, feel free to submit a pull request.
 
 ## License 📝
-This project is licensed under the 
+This project is licensed under the [MIT License](https://github.com/powercomp750/Simple-Counter/tree/dev?tab=License-1-ov-file)
