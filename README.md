@@ -63,13 +63,3 @@ Your contributions are welcome! If you find any issues or want to add enhancemen
 
 ## License 📝
 This project is licensed under the [MIT License](https://github.com/powercomp750/Simple-Counter/tree/dev?tab=License-1-ov-file)
-=======
-<p align="center">
-  <img src="img.png" width="300">
-  <img src="img_1.png" width="300">
-</p>
-
-## Features ✨
-- Dark theme (Enabled automatically)
-- Landscape orientation added
-- Custom value option, allowing to count from desired number
