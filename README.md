@@ -5,7 +5,7 @@
 
 # Simple Counter
   
-![](https://img.shields.io/badge/Version-v2.0-green?style=flat-square)
+![](https://img.shields.io/badge/GitHub-v2.0-green?style=flat-square&logo=github)
 ![](https://img.shields.io/badge/Release-Stable-46ca00?style=flat-square)
 [![Hits](https://hits.sh/github.com/powercomp750/Simple-Counter.svg?style=flat-square&label=Hits&color=fe7d37)](https://hits.sh/github.com/powercomp750/Simple-Counter/)
 ![](https://img.shields.io/badge/Platforms-Android-lightgrey?style=flat-square&logo=android)
